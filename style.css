@@ -1,0 +1,109 @@
+:root{
+    --ff-Primary:'Outfit', sans-serif;
+    --fw-400:400;
+    --fw-700:700;
+    --wdth-mb:375px;
+    --wdth-dt:1440px;
+    --clr-background: hsl(0, 0%, 100%);
+    --clr-body: hsl(212, 45%, 89%);
+    --clr-paragraph-font: hsl(220, 15%, 55%);
+    --clr-title-font: hsl(218, 44%, 22%);
+    --fs-paragraph:15px;
+    --section-width:320px;
+
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+  @media (max-width:660px) {
+    body{
+      min-width: var(--wdth-mb);
+    }
+    section{
+      min-width:var(--section-width);
+    }
+  }
+  
+
+body{
+    background: var(--clr-body);
+    font-family: var(--ff-Primary);
+    max-width:var(--wdth-dt) ;
+  
+}
+section{
+    
+    position:absolute;
+    background: var(--clr-background);
+    max-width: var(--section-width);
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+
+}
+
+section img{
+  border-radius: .5rem;
+}
+.info{
+   align-items: center;
+}
+h1{
+    color: var(--clr-title-font);
+    font-weight: var(--fw-700);
+    margin: 15px;
+    font-size: 21px;
+    padding-top:10px ;
+    text-align: center;
+}
+.paragraph{
+    color: var(--clr-paragraph-font);
+    font-size: var(--fs-paragraph);
+    margin:20px;
+    text-align: center;
+    line-height: 1.2rem; 
+}
+
+
+  
